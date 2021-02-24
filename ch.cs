@@ -10,9 +10,11 @@ class Solution {
         for (int i = 0; i < A.Length; i++){
             if(A[i] == ret){
                 ret++;
+                if(i+1 < A.Length){
+                    if(A[i+1]> ret) return ret;
+                } 
             }
         }   
         return ret;    
     }
 }
-
